@@ -38,4 +38,5 @@ class proxy_setup (
   service {'tinyproxy':
     ensure => running,
   }
+  notify {"The proxy is running on ${::ipaddress_eth1} on port ${port}.":}
 }
